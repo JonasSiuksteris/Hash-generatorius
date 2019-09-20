@@ -3,7 +3,7 @@
 
 Kriterijai:
 
-1.Maišos funkcijos įėjimas (angl. input) gali būti bet kokio dydžio simbolių eilutė (angl. string).
+1. Maišos funkcijos įėjimas (angl. input) gali būti bet kokio dydžio simbolių eilutė (angl. string).
 Input saugomas string tipo kintamajame
 
 2. Maišos funkcijos išėjimas (angl. output) visuomet yra to paties fiksuoto dydžio rezultatas.
@@ -15,7 +15,7 @@ Kuo string ilgesnis, tuo hash'o pateikimas truks ilgiau, tačiau pastebėti sunk
 4. Maišos funkcija yra deterministinė, t. y., tam pačiam įvedimui (angl. input'ui) išvedimas (angl. output'as) visuomet yra tas pats.
 Šitą kriterijų atitinka
 
-5.Iš funkcijos rezultato (output'o) praktiškai neįmanoma atgaminti įvedimo (input'o).
+5. Iš funkcijos rezultato (output'o) praktiškai neįmanoma atgaminti įvedimo (input'o).
 Manau, kad atgaminti neįmanoma
 
 6. Praktiškai neįmanoma surasti tokių dviejų skirtingų argumentų (input'ų), kad jiems gautume tą patį hash'ą, t. y.,: m1 != m2, bet h(m1) = h(m2).
