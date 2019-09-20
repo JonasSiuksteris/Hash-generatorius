@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <fstream>
 
 using namespace std;
 
@@ -21,9 +22,28 @@ char Change_letter(char a)
 int main()
 {
     string a;
+    int option{};
     char b, c;
-	cout << "Iveskite zodi\n";
-	cin >> a;
+    cout << "Kaip norite ivesti faila? \n1 - Ranka\n2 - Is failo\n";
+    cin >> option;
+    while(!(option == 1 || option == 2) || !cin){
+        cin.clear();
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');
+        cout << "Bloga ivestis, kartokite!" << endl;
+        cin >> option;
+    };
+    if(option == 1)
+    {
+        cout << "Iveskite zodi\n";
+        cin >> a;
+    }
+    else
+    {
+        cout << 1;
+        ifstream fd("input.txt");
+        getline(fd, a);
+        cout << a;
+    }
 	while(a.length() <= 20)
     {
 	    if(a.length() == 1)
