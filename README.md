@@ -63,14 +63,14 @@ Average hashing time (s): 0
 
 Hash'o vertinimas([kreditai Lukui Kuzmai](https://github.com/BlackDude22/GeresnisTheHashRacer))
 
-A1 - vidutinis hash'avimo laikas (s).
-B1 - Kolizijų skaičius.
-B2 - Vidutinis hash'avimo greitis (hash/s).
-C1 - Kolizijų skaičius.
-C2 - Vidutinis hash'avimo greitis (hash/s).
-D1 - Minimalus panašumo koeficientas
-D2 - Maksimalus panašumo koeficientas
-D3 - Vidutinis panašumo koeficientas
+A1 - vidutinis hash'avimo laikas (s).  
+B1 - Kolizijų skaičius.  
+B2 - Vidutinis hash'avimo greitis (hash/s).  
+C1 - Kolizijų skaičius.  
+C2 - Vidutinis hash'avimo greitis (hash/s).  
+D1 - Minimalus panašumo koeficientas  
+D2 - Maksimalus panašumo koeficientas  
+D3 - Vidutinis panašumo koeficientas  
 
 | Autorius | A1 |	B1 | B2 |	C1 | C2 |	D1 | D2 |	D3 |
 |----------|----|----|----|----|----|----|----|----|
