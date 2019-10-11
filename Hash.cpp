@@ -1,29 +1,83 @@
 #include <iostream>
 #include <string>
 #include <fstream>
+#include <cmath>
+#include <sstream>
+#include <limits>
 
 using namespace std;
 
-char Change_letter(char a)
+string Hash(string input)
 {
-    int b;
-    if(!(a >= 48 && a <= 57 || a >= 97 && a <= 122))
+    ostringstream stream;
+    int temp[64]{};
+    string hash{};
+    char b, c;
+
+    while(input.length() < 64)
     {
-        b = (int)a;
-        b = b % 36;
-        if(b >= 0 && b <= 9)
-            a = char('0' + b);
+        if(input.length() == 0)
+        {
+            cout << "1234567890abcdeffedc";
+            return 0;
+        }
+
+        if(input.length() == 1)
+        {
+            b = input[input.length() - 1];
+            c = input[input.length() - 1];
+        }
         else
-            a = char('a' + b - 10);
+        {
+            b = input[input.length() - 1];
+            c = input[input.length() - 2];
+        }
+        input.push_back(char(((b+c) + b * 2 + c * 2)%73));
     }
-    return a;
+
+
+    for(int i = 0; i < input.length(); i++)
+    {
+        temp[i % 64] += input[i];
+        temp[(i + 1) % 64] += input[i] << 1;
+    }
+
+    for(int i = 0; i < 64; i++)
+    {
+        temp[i] += (temp[i] + (temp[i] << 1) ) % 54;
+        temp[i] %= 73;
+    }
+    for(int k = 0; k < 2; k++)
+        for(int i = 0; i < 64; i++){
+            for(int j = 0; j < 64; j++)
+            {
+                if(i != j)
+                {
+                    temp[i] += temp[j] + (temp[j] << 1);
+                }
+            }
+            temp[i] <<= 1;
+            temp[i] %= 73;
+        }
+
+    for(int i = 0; i < 64; i++)
+    {
+        temp[i] %= 16;
+    }
+
+    for(int i = 0; i < 64; i++){
+        stream << hex << temp[i];
+    }
+    hash = stream.str();
+
+    return hash;
 }
+
 
 int main()
 {
-    string a;
+    string a{}, buffer;
     int option{};
-    char b, c;
     cout << "Kaip norite ivesti faila? \n1 - Ranka\n2 - Is failo\n";
     cin >> option;
     while(!(option == 1 || option == 2) || !cin){
@@ -39,33 +93,13 @@ int main()
     }
     else
     {
-        cout << 1;
         ifstream fd("input.txt");
-        getline(fd, a);
-        cout << a;
+        while(getline(fd, buffer)){
+            a.append(buffer);
+        }
     }
-	while(a.length() <= 20)
-    {
-	    if(a.length() == 1)
-        {
-            b = a[a.length()-1];
-            c = a[a.length()-1];
 
-        }
-        else
-        {
-            b = a[a.length()-2];
-            c = a[a.length()-1];
-        }
 
-	    a.push_back(Change_letter(char((b+c + b * 2 + c * 2)%128)));
-    }
-    for(int i = 0; i < a.length(); i++)
-        for(int j = 0; j < a.length(); j++)
-        {
-            b = a[i];
-            a[j] = Change_letter(char((b + a[j])%128));
-        }
-    a = a.substr(0,20);
-    cout << "Hash: "<< a << endl;
+
+    cout << Hash(a);
 }
