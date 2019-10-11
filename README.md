@@ -39,6 +39,40 @@ Tyrimo analizė:
 
 * Bent du failai būtų sudaryti iš daug visiškai skirtingų simbolių (> 10000 simbolių)
 
+| File name | Hash |
+|-----------|------|
+| File_1 | a28c5f439f62ff5c17cfe844b7cd15d80a2b1c741dd0ec8a061e49825ce3290f |
+| File_2 | a3dab5686e0b972ae5248cc701049623a2283ad9bcda86934da093a5a102fee0 |
+
 * Bent du failai būtų sudaryti iš daug simbolių ir skirtųsi vienas nuo kito tik vienu simboliu.
 
-* Tuščias failas Ir išveskite output'us. Nepriklausomai nuo Input'o, Output'ai turi būti vienodo dydžio. Tokiu būdu pademonstruosite, kad Jūsų hash funkcija atitinka 1-3-ą reikalavimus.
+| File name | Hash |
+|-----------|------|
+| File_1 | 41710912adc17ecaa16ccb81f2f871b451bddebe89323d871cbdf5e69e374247 |
+| File_2 | feb17e86774ea3863ac516d7eb59e1feea0f375017cc302fd1a8f0823c598353 |
+
+* Tuščias failas Ir išveskite output'us. 
+
+1234567890abcdeffedc
+
+2. Ištirkite Jūsų sukurtos hash funkcijos efektyvumą: tuo tikslu suhash'uokite kiekvieną eilutę iš konstitucija.txt failo.
+
+Number of tests performed on file konstitucija.txt: 100
+Total hashing time (s): 0
+Average hashing time (s): 0
+
+Hash'o vertinimas(kreditai Lukui Kuzmai)
+
+A1 - vidutinis hash'avimo laikas (s).
+B1 - Kolizijų skaičius.
+B2 - Vidutinis hash'avimo greitis (hash/s).
+C1 - Kolizijų skaičius.
+C2 - Vidutinis hash'avimo greitis (hash/s).
+D1 - Minimalus panašumo koeficientas
+D2 - Maksimalus panašumo koeficientas
+D3 - Vidutinis panašumo koeficientas
+
+| Autorius | A1 |	B1 |	B2 |	C1 |	C2 |	D1 |	D2 |	D3 |
+|----------|----|----|-----|-----|-----|-----|-----|-----|
+| SHA256	| 0.002	| 0	| 545 | 137 |	0	| 123 | 797	| 0	| 0.23	| 0.06|
+|JonasSiuksteris |	0.006 |	0	| 127 | 319 |	0	| 120 | 221	| 0	| 0.18 |	0.06|
