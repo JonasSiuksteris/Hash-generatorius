@@ -29,8 +29,8 @@ Tyrimo analizė:
 
 1. Susikurkite testinių įvedimo failų pavyzdžių, tokių kad:
 * Bent du failai būtų sudaryti tik iš vieno, tačiau skirtingo, simbolio.
-|Symbol|Hash|
-|------|----|
+| Symbol | Hash |
+|--------|------|
 | '/' | b00e3158235408202ea048e0bff65f3f0f390d295ac8b05a2a5ee74d015a8670 |
 | 'v' | dc14d06fb9982f45a073126c54a5771f357de544194c7206a437d55f73e2ea44 |
 
