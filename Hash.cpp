@@ -73,10 +73,9 @@ string Hash(string input)
     return hash;
 }
 
-
-int main()
+string Manual()
 {
-    string a{}, buffer;
+    string buffer, a{};
     int option{};
     cout << "Kaip norite ivesti faila? \n1 - Ranka\n2 - Is failo\n";
     cin >> option;
@@ -98,8 +97,25 @@ int main()
             a.append(buffer);
         }
     }
+    return a;
+}
 
+string File(string file)
+{
+    string a{}, buffer;
+    ifstream fd(file);
+    while(getline(fd, buffer)){
+        a.append(buffer);
+    }
+    return a;
+}
 
+int main(int argc, char *argv[])
+{
+    if(argc == 1)
+        cout << Hash(Manual());
 
-    cout << Hash(a);
+    if(argc == 2)
+        cout << Hash(File(argv[1]));
+
 }
