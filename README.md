@@ -61,7 +61,7 @@ Number of tests performed on file konstitucija.txt: 100
 Total hashing time (s): 0
 Average hashing time (s): 0
 
-Hash'o vertinimas(kreditai Lukui Kuzmai)
+Hash'o vertinimas([kreditai Lukui Kuzmai](https://github.com/blockchain-group/Blockchain-technologijos/blob/master/pratybos/1uzduotis-Hashavimas.md))
 
 A1 - vidutinis hash'avimo laikas (s).
 B1 - Kolizijų skaičius.
