@@ -61,7 +61,7 @@ Number of tests performed on file konstitucija.txt: 100
 Total hashing time (s): 0
 Average hashing time (s): 0
 
-Hash'o vertinimas([kreditai Lukui Kuzmai](https://github.com/blockchain-group/Blockchain-technologijos/blob/master/pratybos/1uzduotis-Hashavimas.md))
+Hash'o vertinimas([kreditai Lukui Kuzmai](https://github.com/BlackDude22/GeresnisTheHashRacer))
 
 A1 - vidutinis hash'avimo laikas (s).
 B1 - Kolizijų skaičius.
@@ -72,7 +72,7 @@ D1 - Minimalus panašumo koeficientas
 D2 - Maksimalus panašumo koeficientas
 D3 - Vidutinis panašumo koeficientas
 
-| Autorius | A1 |	B1 |	B2 |	C1 |	C2 |	D1 |	D2 |	D3 |
-|----------|----|----|-----|-----|-----|-----|-----|-----|
+| Autorius | A1 |	B1 | B2 |	C1 | C2 |	D1 | D2 |	D3 |
+|----------|----|----|----|----|----|----|----|----|
 | SHA256	| 0.002	| 0	| 545 | 137 |	0	| 123 | 797	| 0	| 0.23	| 0.06|
 |JonasSiuksteris |	0.006 |	0	| 127 | 319 |	0	| 120 | 221	| 0	| 0.18 |	0.06|
