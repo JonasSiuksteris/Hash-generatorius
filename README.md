@@ -53,7 +53,7 @@ Tyrimo analizė:
 
 * Tuščias failas Ir išveskite output'us. 
 
-1234567890abcdeffedc
+1234567890abcdeffedcba09876543211234567890abcdeffedbca0987654321
 
 2. Ištirkite Jūsų sukurtos hash funkcijos efektyvumą: tuo tikslu suhash'uokite kiekvieną eilutę iš konstitucija.txt failo.
 
